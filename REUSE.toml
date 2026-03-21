@@ -1,0 +1,6 @@
+version = 1
+
+[[annotations]]
+path = ["**/*.md", "**/.gitignore", "go.mod", "renovate.json"]
+SPDX-FileCopyrightText = "© 2026 Visiosto oy <visiosto@visiosto.fi>"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
