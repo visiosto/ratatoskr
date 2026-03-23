@@ -4,8 +4,25 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"os"
+
+	"visiosto.dev/ratatoskr/internal/version"
+)
 
 func main() {
-	fmt.Println("Hello, world!")
+	// ctx := context.Background()
+
+	if len(os.Args) > 1 {
+		if os.Args[1] == "version" {
+			_, err := fmt.Fprintf(os.Stdout, "%s\n", version.Version.ComparableString())
+			if err != nil {
+				log.Fatal(err)
+			}
+
+			return
+		}
+	}
 }
