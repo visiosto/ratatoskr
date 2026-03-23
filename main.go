@@ -2,9 +2,13 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+/*
+Ratatoskr is a mail backend for static websites.
+*/
 package main
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"os"
@@ -13,7 +17,7 @@ import (
 )
 
 func main() {
-	// ctx := context.Background()
+	_ = context.Background()
 
 	if len(os.Args) > 1 {
 		if os.Args[1] == "version" {
