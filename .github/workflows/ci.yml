@@ -108,7 +108,7 @@ jobs:
           echo "ARTIFACT_NAME=ratatoskr-${BASE_VERSION}-${{ matrix.goos }}-${{ matrix.goarch }}" >> "${GITHUB_ENV}"
           echo "BUILD_OUTPUT=ratatoskr$(go env GOEXE)" >> "${GITHUB_ENV}"
       - run: make build GOFLAGS="-v" VERSION="${{ env.VERSION }}"
-      - uses: actions/upload-artifact@v6.0.0
+      - uses: actions/upload-artifact@v7.0.1
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           name: ${{ env.ARTIFACT_NAME }}
