@@ -37,7 +37,7 @@ jobs:
       - run: |
           GOLANGCI_LINT_VERSION="$(grep '^GOLANGCI_LINT_VERSION' Makefile | cut -d '=' -f2 | xargs)"
           echo "GOLANGCI_LINT_VERSION=${GOLANGCI_LINT_VERSION}" >> "${GITHUB_ENV}"
-      - uses: golangci/golangci-lint-action@v9.2.0
+      - uses: golangci/golangci-lint-action@v9.3.0
         with:
           version: v${{ env.GOLANGCI_LINT_VERSION }}
 
